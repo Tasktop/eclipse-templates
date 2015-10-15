@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="java-members" deleted="false" description="JUnit 4 test case set up method" enabled="true" name="setUp">@${testType:newType(org.junit.Before)}
+public void setUp() {
+  ${cursor}
+}</template><template autoinsert="false" context="java-members" deleted="false" description="JUnit 4 test case clean up method" enabled="true" name="tearDown">@${testType:newType(org.junit.After)}
+public void tearDown() {
+  ${cursor}
+}</template><template autoinsert="false" context="java-members" deleted="false" description="JUnit 4 test method" enabled="true" id="org.eclipse.jdt.ui.templates.test_junit4" name="test">@${testType:newType(org.junit.Test)}
+public void test${Name}() {
+	${cursor} 
+}</template></templates>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="java-statements" deleted="false" description="Mockito doAnswer(answer).when(mock).call() construct" enabled="true" name="doAnswer">${a:importStatic(org.mockito.Mockito.doAnswer)}${b:import(org.mockito.stubbing.Answer, org.mockito.invocation.InvocationOnMock, java.lang.Throwable)}doAnswer( new Answer&lt;${T}&gt;() {&#13;
+	public ${T} answer( InvocationOnMock invocation ) throws Throwable {&#13;
+		${cursor}&#13;
+		return null;&#13;
+	}&#13;
+} ).when( ${mock} ).${call};</template><template autoinsert="false" context="java-statements" deleted="false" description="Mockito doAnswer(answer).when(mock).call() construct that manipulates invocation argument" enabled="true" name="doAnswerOnArgument">${a:importStatic(org.mockito.Mockito.doAnswer)}${b:import(org.mockito.stubbing.Answer, org.mockito.invocation.InvocationOnMock, java.lang.Throwable)}doAnswer( new Answer&lt;${T}&gt;() {&#13;
+	public ${T} answer( InvocationOnMock invocation ) throws Throwable {&#13;
+		${ArgType} ${argument} = ( ${ArgType} )invocation.getArguments()[ ${i} ];&#13;
+		${cursor}&#13;
+		return null;&#13;
+	}&#13;
+} ).when( ${mock} ).${call};</template><template autoinsert="false" context="java-statements" deleted="false" description="Mockito doReturn(value).when(mock).call() construct" enabled="true" name="doReturn">${:importStatic(org.mockito.Mockito.doReturn)}doReturn( ${value} ).when( ${mock} ).${call};</template><template autoinsert="false" context="java-statements" deleted="false" description="Mockito doThrow(throwable).when(mock).call() construct" enabled="true" name="doThrow">${:importStatic(org.mockito.Mockito.doThrow)}doThrow( ${throwable} ).when( ${mock} ).${call};</template><template autoinsert="false" context="java-statements" deleted="false" description="Mockito ArgumentCaptor.forClass(Type.class) construct" enabled="true" name="forClass">${a:import(org.mockito.ArgumentCaptor)}ArgumentCaptor&lt;${Type}&gt; ${captor} = ${b:importStatic(org.mockito.ArgumentCaptor.forClass)}forClass( ${Type}.class );</template><template autoinsert="false" context="java-statements" deleted="false" description="Mockito when(mock.call()).thenAnswer(answer) construct" enabled="true" name="whenThenAnswer">${a:importStatic(org.mockito.Mockito.when)}${b:import(org.mockito.stubbing.Answer, org.mockito.invocation.InvocationOnMock, java.lang.Throwable)}when( ${mock}.${call} ).thenAnswer( new Answer&lt;${T}&gt;() {&#13;
+	public ${T} answer( InvocationOnMock invocation ) throws Throwable {&#13;
+		${cursor}&#13;
+		return null;&#13;
+	}&#13;
+} );</template><template autoinsert="false" context="java-statements" deleted="false" description="Mockito when(mock.call()).thenAnswer(answer) construct that manipulates invocation argument" enabled="true" name="whenThenAnswerOnArgument">${a:importStatic(org.mockito.Mockito.when)}${b:import(org.mockito.stubbing.Answer, org.mockito.invocation.InvocationOnMock, java.lang.Throwable)}when( ${mock}.${call} ).thenAnswer( new Answer&lt;${T}&gt;() {&#13;
+	public ${T} answer( InvocationOnMock invocation ) throws Throwable {&#13;
+		${ArgType} ${argument} = ( ${ArgType} )invocation.getArguments()[ ${i} ];&#13;
+		${cursor}&#13;
+		return null;&#13;
+	}&#13;
+} );</template><template autoinsert="false" context="java-statements" deleted="false" description="Mockito when(mock.call()).thenReturn(value) construct" enabled="true" name="whenThenReturn">${:importStatic(org.mockito.Mockito.when)}when( ${mock}.${call} ).thenReturn( ${value} );</template><template autoinsert="false" context="java-statements" deleted="false" description="Mockito when(mock.call()).thenThrow(throwable) construct" enabled="true" name="whenThenThrow">${:importStatic(org.mockito.Mockito.when)}when( ${mock}.${call} ).thenThrow( ${throwable} );</template></templates>
