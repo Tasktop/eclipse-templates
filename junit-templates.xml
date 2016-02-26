@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="java-members" deleted="false" description="JUnit 4 test case set up method" enabled="true" name="setUp">@${testType:newType(org.junit.Before)}
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java" deleted="false" description="Insert JUnit Expected exception" enabled="true" name="expected exception">@Rule${imp:import(org.junit.rules.ExpectedException,org.junit.Rule)}
+public ExpectedException thrown = ExpectedException.none();</template><template autoinsert="false" context="java-members" deleted="false" description="JUnit 4 test case set up method" enabled="true" name="setUp">@${testType:newType(org.junit.Before)}
 public void setUp() {
   ${cursor}
 }</template><template autoinsert="false" context="java-members" deleted="false" description="JUnit 4 test case clean up method" enabled="true" name="tearDown">@${testType:newType(org.junit.After)}
